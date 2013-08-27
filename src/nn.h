@@ -207,6 +207,14 @@ NN_EXPORT const char *nn_strerror (int errnum);
 /*  General usage is to start at i=0 and iterate until NULL is returned.      */
 NN_EXPORT const char *nn_symbol (int i, int *value);
 
+/* Returns the type of argument expected by nn_setsockopt and returned by the */
+/* nn_getsockopt functions for a given level, option pair.                    */
+/* Returns NN_OPTTYPE_NOTFOUND for unsupported values of level and option.    */
+#define NN_OPTTYPE_NOTFOUND 0
+#define NN_OPTTYPE_INT      1
+#define NN_OPTTYPE_STRING   2
+NN_EXPORT int nn_sockopttype(int level, int option);
+
 /******************************************************************************/
 /*  Helper function for shutting down multi-threaded applications.            */
 /******************************************************************************/

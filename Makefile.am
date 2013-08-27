@@ -55,7 +55,8 @@ NANOMSG_CORE = \
     src/core/sock.c \
     src/core/sockbase.c \
     src/core/device.c \
-    src/core/symbol.c
+    src/core/symbol.c \
+    src/core/sockopttype.c
 
 NANOMSG_AIO = \
     src/aio/ctx.h \
